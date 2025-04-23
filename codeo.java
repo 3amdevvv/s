@@ -139,3 +139,16 @@ public class CodeOptimizer {
         sc.close();
     }
 }
+
+
+
+Enter the number of code lines:
+7
+Enter code lines:
+t1 = 4 + 5
+t2 = a + b
+t3 = 4 + 5
+t4 = t1 + t2
+t5 = t3 + t2
+t6 = t1 + t2
+t7 = 2 * 3
