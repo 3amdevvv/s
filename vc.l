@@ -24,6 +24,6 @@ int main() {
 
 Save the code in a file named vowel_consonant.l
 
-lex vowel_consonant.l
-gcc lex.yy.c -o vowel_consonant
-./vowel_consonant
+lex filename.l
+gcc lex.yy.c -lfl
+./a.out
