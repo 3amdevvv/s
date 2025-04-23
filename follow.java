@@ -116,19 +116,27 @@ public class FollowSetCalculator {
 }
 
 
-Enter number of productions: 2
+
+
+Enter number of productions: 5
 Enter productions (e.g., S->A B or A->a | e):
-S->A B | a | e
-B->b
-Enter the start symbol: S
+E -> T E'
+E' -> + T E' | e
+T -> F T'
+T' -> * F T' | e
+F -> ( E ) | id
+Enter the start symbol: E
 Enter number of FIRST sets: 5
 Enter FIRST sets (e.g., A: a e):
-S: a b e
-A: a e
-B: b
-a: a
-b: b
+E: ( id
+E': + e
+T: ( id
+T': * e
+F: ( id
 
 FOLLOW sets:
-FOLLOW(B) = [$]
-FOLLOW(S) = [$]
+FOLLOW(E') = [$]
+FOLLOW(T') = [$, +]
+FOLLOW(T) = [$, +]
+FOLLOW(E) = [$]
+FOLLOW(F) = [$, *, +]
